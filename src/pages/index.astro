@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { config } from '../config';
 
 const title = 'SAP 学习中心';
 const description = 'SAP学习资源中心';
@@ -15,8 +16,8 @@ const permalink = Astro.site.href;
 
     <div class="hero-image-container">
       <picture>
-        <source srcset="/assets/home-illustration.png" media="(min-width: 600px)">
-        <img class="hero-image" alt="Illustration of person reading a book" src="/assets/home-illustration-small.png" width="550" height="466">
+        <source srcset={`${config.imageBaseUrl}home-illustration.png`} media="(min-width: 600px)">
+        <img class="hero-image" alt="Illustration of person reading a book" src={`${config.imageBaseUrl}home-illustration-small.png`} width="550" height="466">
       </picture>
       <p class="caption">
         Illustration by

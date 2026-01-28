@@ -4,7 +4,6 @@ slug: user-convention
 publishDate: 27 Jan 2026
 description: 平台仅限 SAP 学习与实践，禁止商用及违规操作；请妥善保管账号、勿上传敏感数据，并尊重知识产权。
 ---
-
 ![Illustration of woman using a meditation app](/assets/blog/casual-life-3d-meditation-crystal.png)
 
 <div style="position: absolute; top: 20px; right: 20px; text-align: center;">
