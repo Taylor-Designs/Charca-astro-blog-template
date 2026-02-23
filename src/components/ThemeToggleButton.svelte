@@ -1,13 +1,19 @@
 <script>
-  const rootEl = typeof document !== 'undefined' ? document.documentElement : null;
+  let rootEl; 
+  import { onMount } from 'svelte'; 
   const themes = ['light', 'dark'];
   let theme = ''
 
-  if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-    theme = localStorage.getItem('theme');
-  } else if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    theme = 'dark';
-  }
+  onMount(() => {
+    rootEl = document.documentElement;
+    if (localStorage.getItem('theme')) {
+      theme = localStorage.getItem('theme');
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark';
+    } else {
+      theme = 'light';
+    }
+  });
 
   function handleChange(event) {
     theme = event.target.value;
