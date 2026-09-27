@@ -8,6 +8,22 @@ const permalink = `${Astro.site.href}checkout`;
 <BaseLayout title={title} description={description} permalink={permalink} current="checkout">
   <div class="container">
     <h1>Checkout</h1>
-        <a Paddle.Checkout.open({ items, customer: { email } }) checkout> </a>
+         // define items
+  let itemsList = [
+    {
+      priceId: "pri_01m3j6ef5q8mj11q6nft810000",
+      quantity: 1
+    }
+  ];
+
+  // open checkout
+  function openCheckout(items){
+    Paddle.Checkout.open({
+      items: items
+    });
+  }
+</script>
+
+<a href="#" onclick="openCheckout(itemsList)"><b>Sign up now</b></a>
 </div>
 </BaseLayout>
