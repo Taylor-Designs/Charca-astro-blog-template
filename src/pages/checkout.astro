@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'checkout';
+const description = 'Taylor Designs checkout page.';
+const permalink = `${Astro.site.href}checkout`;
+---
+<BaseLayout title={title} description={description} permalink={permalink} current="about">
+  <div class="container">
+    <h1>Checkout</h1>
+</div>
+</BaseLayout>
