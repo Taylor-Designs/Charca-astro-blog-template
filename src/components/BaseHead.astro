@@ -54,25 +54,3 @@ const socialUrl = Astro.site.href + 'assets/social.png'
 </script>
 
 <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
-
-<script type="text/javascript">
-  Paddle.Environment.set("sandbox");
-  Paddle.Initialize({
-    token: "test_ee6de5aeec9d6c527ee68151945"
-  });
-
- // define items
-  let itemsList = [
-    {
-      priceId: "pri_01m3j6ef5q8mj11q6nft810000",
-      quantity: 1
-    }
-  ];
-
-  // open checkout
-  function openCheckout(items){
-    Paddle.Checkout.open({
-      items: items
-    });
-  }
-</script>
