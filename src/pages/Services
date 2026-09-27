@@ -1,1 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Taylor Designs services';
+const description = 'Available design services.';
+const permalink = `${Astro.site.href}services`;
+---
+
+<BaseLayout title={title} description={description} permalink={permalink} current="services">
+  <div class="container">
+    <h1>Services</h1>
+    <h2>Logo Designs</h2>
+    <figure class="about-image">
+      <img src="/assets/Branding-Examples.png" alt="Logos I designed for CUE and LGBTQIAmes" width="330">
+      <figcaption>
+        Logos I designed for CUE and LGBTQIAmes
+      </figcaption>
+    </figure>
+    <p>Logo design options include:</p>
+### Unordered List
+
+- Logomark $250
+- Wordmark $250
+- Combination $500
+- Logo Restoration $150
+
+<h2>Flyer Designs</h2>
+    <p>Custom flier designs to help you advertise events, get the word out about your services, or anything else you can think of to put on a flier!</p>
+    
+  </div>
+</BaseLayout>
 
