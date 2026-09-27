@@ -8,6 +8,6 @@ const permalink = `${Astro.site.href}checkout`;
 <BaseLayout title={title} description={description} permalink={permalink} current="checkout">
   <div class="container">
     <h1>Checkout</h1>
-        <a Paddle.Checkout.open({ items, customer: { email } }) /a>
+        <a Paddle.Checkout.open({ items, customer: { email } }) </a>
 </div>
 </BaseLayout>
